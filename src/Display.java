@@ -5,13 +5,13 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Display {
-	private JLabel timerLabel = new JLabel("src.Time: 0s");
+	private JLabel timerLabel = new JLabel("Time: 0s");
 	private javax.swing.Timer swingTimer;
 	private int secondsElapsed = 0;
 
-	public JFrame frame = new JFrame("src.Minesweeper - by Nowaycode");
+	public JFrame frame = new JFrame("Minesweeper");
 
-	public JButton levelButton = new JButton("src.Level");
+	public JButton levelButton = new JButton("Level");
 	public JButton customLevelButton = new JButton("Custom");
 	public JButton playAgainButton = new JButton("Play Again");
 	public JButton rankingsButton = new JButton("Rankings");
@@ -231,7 +231,7 @@ public class Display {
 				String[] options = {"Easy", "Medium", "Hard"};
 				int choice = JOptionPane.showOptionDialog(frame,
 						"Please, choose the level:",
-						"Choose src.Level",
+						"Choose Level",
 						JOptionPane.YES_NO_CANCEL_OPTION,
 						JOptionPane.QUESTION_MESSAGE,
 						null,
@@ -279,11 +279,11 @@ public class Display {
 	public void startTimer() {
 		if (swingTimer != null) swingTimer.stop();
 		secondsElapsed = 0;
-		timerLabel.setText("src.Time: 0s");
+		timerLabel.setText("Time: 0s");
 		swingTimer = new javax.swing.Timer(1000, new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				secondsElapsed++;
-				timerLabel.setText("src.Time: " + secondsElapsed + "s");
+				timerLabel.setText("Time: " + secondsElapsed + "s");
 			}
 		});
 		swingTimer.start();
