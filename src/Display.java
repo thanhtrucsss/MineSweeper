@@ -35,7 +35,6 @@ public class Display {
 	public static ImageIcon unclickedIcon = new ImageIcon("src/img/unclicked.png");
 	public static ImageIcon nullIcon = new ImageIcon("src/img/null.png");
 	public static ImageIcon[] numberIcons = new ImageIcon[9];
-
 	public Display(int rows, int cols){
 		Color bgMain = new Color(245, 248, 252);
 		Color bgBoard = new Color(255,255,255);
@@ -57,7 +56,7 @@ public class Display {
 		frame.getContentPane().setBackground(bgMain);
 
 		for (int i = 1; i <= 8; i++)
-			numberIcons[i] = new ImageIcon(i + ".png");
+			numberIcons[i] = new ImageIcon("src/img/" + i + ".png");
 
 		JPanel statusPanel = new JPanel();
 		statusPanel.setBackground(bgToolbar);
